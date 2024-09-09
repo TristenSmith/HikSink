@@ -23,7 +23,7 @@ cameras:
     triggers:
       - trigger:
           identifier:
-            channel: "1"
+            channel: "2" 
             event_type: Motion
           hik_id: Motion-1
           description: ""
