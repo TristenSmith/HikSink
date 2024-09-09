@@ -59,6 +59,11 @@ expression: parsed
   hik_id: fielddetection-1
   description: fielddetection Event trigger Information
 - identifier:
+    channel: "2"
+    event_type: FieldDetection
+  hik_id: fielddetection-2
+  description: fielddetection Event trigger Information
+- identifier:
     channel: "1"
     event_type: VideoMismatch
   hik_id: videomismatch
