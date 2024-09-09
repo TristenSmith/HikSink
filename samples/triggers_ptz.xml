@@ -123,8 +123,8 @@
 <id>fielddetection-1</id>
 <eventType>fielddetection</eventType>
 <eventDescription>fielddetection Event trigger Information</eventDescription>
-<videoInputChannelID>1</videoInputChannelID>
-<dynVideoInputChannelID>1</dynVideoInputChannelID>
+<videoInputChannelID>2</videoInputChannelID>
+<dynVideoInputChannelID>2</dynVideoInputChannelID>
 <EventTriggerNotificationList>
 <EventTriggerNotification>
 <id>center</id>
