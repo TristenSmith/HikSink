@@ -124,26 +124,7 @@
 <eventType>fielddetection</eventType>
 <eventDescription>fielddetection Event trigger Information</eventDescription>
 <videoInputChannelID>1</videoInputChannelID>
-<dynVideoInputChannelID>1</dynVideoInputChannelID>
-<EventTriggerNotificationList>
-<EventTriggerNotification>
-<id>center</id>
-<notificationMethod>center</notificationMethod>
-<notificationRecurrence>beginning</notificationRecurrence>
-</EventTriggerNotification>
-<EventTriggerNotification>
-<id>trace</id>
-<notificationMethod>trace</notificationMethod>
-<notificationRecurrence>beginning</notificationRecurrence>
-</EventTriggerNotification>
-</EventTriggerNotificationList>
-</EventTrigger>
-<EventTrigger>
-<id>fielddetection-2</id>
-<eventType>fielddetection</eventType>
-<eventDescription>fielddetection Event trigger Information</eventDescription>
-<videoInputChannelID>2</videoInputChannelID>
-<dynVideoInputChannelID>2</dynVideoInputChannelID>
+<dynVideoInputChannelID>4</dynVideoInputChannelID>
 <EventTriggerNotificationList>
 <EventTriggerNotification>
 <id>center</id>
