@@ -41,7 +41,7 @@ impl TriggerItem {
                 //})
                 //.or_else(|| event_trigger.get_child("inputIOPortID", minidom::NSChoice::Any))
                 //.or_else(|| event_trigger.get_child("dynInputIOPortID", minidom::NSChoice::Any))
-                .map(|e| e.text());
+                //.map(|e| e.text());
 
             let event_type = event_type
                 .parse()
