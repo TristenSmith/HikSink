@@ -34,13 +34,13 @@ impl TriggerItem {
                 .get_child("eventDescription", minidom::NSChoice::Any)
                 .map(|e| e.text())
                 .unwrap_or_else(String::new);
-            let channel = event_trigger
-                .get_child("videoInputChannelID", minidom::NSChoice::Any)
-                .or_else(|| {
-                    event_trigger.get_child("dynVideoInputChannelID", minidom::NSChoice::Any)
-                })
-                .or_else(|| event_trigger.get_child("inputIOPortID", minidom::NSChoice::Any))
-                .or_else(|| event_trigger.get_child("dynInputIOPortID", minidom::NSChoice::Any))
+            let channel = 2//event_trigger
+                //.get_child("videoInputChannelID", minidom::NSChoice::Any)
+                //.or_else(|| {
+                    //event_trigger.get_child("dynVideoInputChannelID", minidom::NSChoice::Any)
+                //})
+                //.or_else(|| event_trigger.get_child("inputIOPortID", minidom::NSChoice::Any))
+                //.or_else(|| event_trigger.get_child("dynInputIOPortID", minidom::NSChoice::Any))
                 .map(|e| e.text());
 
             let event_type = event_type
