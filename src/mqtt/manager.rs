@@ -175,7 +175,7 @@ impl Manager {
                             warn!(
                                 camera=cam.config.identifier(),
                                 trigger=?alert_identifier.event_type,
-                                "Camera send an alert for a trigger which does not exist",
+                                "Camera send an alert for a trigger which does not exist", //TODO THIS THIS THE ERROR MESSAGE I GET
                             );
                         }
                     }
@@ -601,7 +601,7 @@ mod test {
 
         // Setup trigger
         let trigger1: TriggerItem =
-            EventIdentifier::new(Some("1".into()), EventType::Motion).into();
+            EventIdentifier::new(Some("2".into()), EventType::Motion).into();
         manager.next_event(CameraEvent {
             id: cams[0].identifier().to_string(),
             event: CameraEventType::Connected {
