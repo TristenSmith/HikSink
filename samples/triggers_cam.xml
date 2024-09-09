@@ -119,7 +119,7 @@
 </EventTriggerNotificationList>
 </EventTrigger>
 <EventTrigger>
-<id>fielddetection-1</id>
+<id>fielddetection-2</id>
 <eventType>fielddetection</eventType>
 <eventDescription>fielddetection Event trigger Information</eventDescription>
 <videoInputChannelID>2</videoInputChannelID>
