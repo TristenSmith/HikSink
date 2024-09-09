@@ -119,19 +119,6 @@
 </EventTriggerNotificationList>
 </EventTrigger>
 <EventTrigger>
-<id>fielddetection-2</id>
-<eventType>fielddetection</eventType>
-<eventDescription>fielddetection Event trigger Information</eventDescription>
-<videoInputChannelID>2</videoInputChannelID>
-<dynVideoInputChannelID>2</dynVideoInputChannelID>
-<EventTriggerNotificationList>
-<EventTriggerNotification>
-<id>center</id>
-<notificationMethod>center</notificationMethod>
-<notificationRecurrence>beginning</notificationRecurrence>
-</EventTriggerNotification>
-</EventTriggerNotificationList>
-</EventTrigger>
 <EventTrigger>
 <id>videomismatch</id>
 <eventType>videomismatch</eventType>
