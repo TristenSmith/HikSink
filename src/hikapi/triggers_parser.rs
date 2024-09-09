@@ -34,7 +34,7 @@ impl TriggerItem {
                 .get_child("eventDescription", minidom::NSChoice::Any)
                 .map(|e| e.text())
                 .unwrap_or_else(String::new);
-            let channel = 2//event_trigger
+            let channel = "2"//event_trigger
                 //.get_child("videoInputChannelID", minidom::NSChoice::Any)
                 //.or_else(|| {
                     //event_trigger.get_child("dynVideoInputChannelID", minidom::NSChoice::Any)
