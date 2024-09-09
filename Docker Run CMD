@@ -1,0 +1,5 @@
+   docker run -d \
+      --name=hiksink \
+      --restart=unless-stopped \
+      -v /home/vastadmin/HikSink/config.toml:/app/config.toml \
+      hiksink
