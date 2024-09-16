@@ -73,7 +73,7 @@ impl Manager {
         MqttMessage::new(
             self.topics.get_global_stats(),
             MqttQoS::AtLeastOnce,
-            true,
+            false,
             serde_json::json!({
                 "cameras_connected": num_cameras_connected,
                 "cameras_disconnected": num_cameras - num_cameras_connected,
