@@ -101,10 +101,10 @@ fn pull_region_list(el: &minidom::Element) -> Result<Vec<DetectionRegion>, Alert
                 .get_child("regionID", minidom::NSChoice::Any)
                 .ok_or_else(|| AlertParseError::FieldMissing("regionID".to_string()))?
                 .text();
-            let sensitivity = child
-                .get_child("sensitivityLevel", minidom::NSChoice::Any)
-                .ok_or_else(|| AlertParseError::FieldMissing("sensitivityLevel".to_string()))?
-                .text()
+            let sensitivity = "60"
+                //.get_child("sensitivityLevel", minidom::NSChoice::Any)
+                //.ok_or_else(|| AlertParseError::FieldMissing("sensitivityLevel".to_string()))?
+                //.text()
                 .parse::<u8>()
                 .map_err(|e| {
                     AlertParseError::NumberExpected("sensitivityLevel".into(), e.to_string())
