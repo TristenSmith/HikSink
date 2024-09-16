@@ -439,27 +439,27 @@ impl Default for MqttTopics {
     }
 }
 
-#[derive(Debug, PartialEq, Serialize, Deserialize, Clone)]
+#[derive(Debug, PartialEq, Serialize, Deserialize, Clone)]// TODO Removed Retain
 pub struct MqttMessage {
     pub topic: String,
     pub qos: MqttQoS,
-    pub retain: bool,
+    //pub retain: bool,
     pub payload: MqttPayload,
 }
 
 impl MqttMessage {
-    pub fn new(topic: String, qos: MqttQoS, retain: bool, payload: impl Into<MqttPayload>) -> Self {
+    pub fn new(topic: String, qos: MqttQoS, /*retain: bool,*/ payload: impl Into<MqttPayload>) -> Self {
         Self {
             topic,
             qos,
-            retain,
+            //retain,
             payload: payload.into(),
         }
     }
 }
 impl From<MqttMessage> for rumqttc::LastWill {
     fn from(m: MqttMessage) -> Self {
-        rumqttc::LastWill::new(m.topic, m.payload.render(), m.qos.into(), m.retain)
+        rumqttc::LastWill::new(m.topic, m.payload.render(), m.qos.into()/*, m.retain*/)
     }
 }
 
