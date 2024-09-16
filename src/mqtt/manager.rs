@@ -33,7 +33,7 @@ impl Manager {
         MqttMessage::new(
             self.topics.get_global_availability(),
             MqttQoS::AtLeastOnce,
-            true,
+            false,
             "offline",
         )
     }
@@ -50,7 +50,7 @@ impl Manager {
         messages.push(MqttMessage::new(
             self.topics.get_global_availability(),
             MqttQoS::AtLeastOnce,
-            true,
+            false,
             "online",
         ));
 
@@ -73,7 +73,7 @@ impl Manager {
         MqttMessage::new(
             self.topics.get_global_stats(),
             MqttQoS::AtLeastOnce,
-            true,
+            false,
             serde_json::json!({
                 "cameras_connected": num_cameras_connected,
                 "cameras_disconnected": num_cameras - num_cameras_connected,
@@ -88,7 +88,7 @@ impl Manager {
             MqttMessage::new(
                 self.topics.get_global_stats_discovery(key),
                 MqttQoS::AtLeastOnce,
-                true,
+                false,
                 serde_json::json!({
                     "availability": [
                         {
@@ -175,7 +175,7 @@ impl Manager {
                             warn!(
                                 camera=cam.config.identifier(),
                                 trigger=?alert_identifier.event_type,
-                                "Camera send an alert for a trigger which does not exist",
+                                "Camera send an alert for a trigger which does not exist", //TODO Get this with the tandamvu ptz
                             );
                         }
                     }
@@ -236,7 +236,7 @@ impl CameraDetails {
         MqttMessage::new(
             topics.get_camera_availability(self),
             MqttQoS::AtLeastOnce,
-            true,
+            false,
             match self.connected {
                 true => "online",
                 false => "offline",
@@ -248,7 +248,7 @@ impl CameraDetails {
         MqttMessage::new(
             topics.get_camera_log(self),
             MqttQoS::AtLeastOnce,
-            true,
+            false,
             self.log.as_ref(),
         )
     }
@@ -274,7 +274,7 @@ impl TriggerDetails {
         MqttMessage::new(
             topics.get_trigger_state(cam, self),
             MqttQoS::AtLeastOnce,
-            true,
+            false,
             serde_json::json!({
                 "alerting": self.alerting,
                 "regions": self.regions,
@@ -337,7 +337,7 @@ impl TriggerDetails {
         MqttMessage::new(
             topics.get_trigger_discovery(cam, self),
             MqttQoS::AtLeastOnce,
-            true,
+            false,
             discovery,
         )
     }
